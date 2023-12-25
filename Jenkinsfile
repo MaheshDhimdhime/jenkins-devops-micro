@@ -1,6 +1,28 @@
-//SCRIPTED
-node {
-		echo "Build"
-		echo "Test"
-		echo "Test"
+// //SCRIPTED
+// node {
+// 		echo "Build"
+// 		echo "Test"
+// 		echo "Test"
+// }
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
